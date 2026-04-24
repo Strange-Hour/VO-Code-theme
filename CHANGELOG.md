@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.7.0 — 2026-04-24
+
+Ghostty terminal theme and build pipeline extension.
+
+### Added
+
+- `extras/ghostty-theme.tmpl` + `extras/ghostty-theme.conf` — Ghostty color theme using
+  the full Void Odyssey palette. Includes ANSI colors (matching the Windows Terminal scheme),
+  plus Ghostty-specific appearance settings: `background-opacity = 0.95`,
+  `background-blur-radius = 20`, block cursor, `font-size = 13`, `minimum-contrast = 3.0`.
+  Selection background uses `--purple-bright` (#9A6EF0) for WCAG AA-compliant contrast.
+
+### Changed
+
+- `tools/build.mjs` — targets now carry a `validate` flag (default `true`). When `false`,
+  the JSON parse check is skipped, enabling non-JSON output formats. Existing JSON targets
+  are unaffected.
+- `README.md` — Ghostty install section added; file tree, tagline, and Origin section
+  updated to include Ghostty as a first-class supported target.
+
 ## 1.6.0 — 2026-04-24
 
 HUD frame pass — title bar and status bar now carry the theme's signature
