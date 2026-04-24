@@ -33,6 +33,11 @@ const targets = [
         output: "extras/ghostty-theme.conf",
         validate: false,
     },
+    {
+        template: "extras/claude-code-theme.tmpl",
+        output: "extras/claude-code-theme.json",
+        validate: true,
+    },
 ];
 
 function render({ template, output, validate = true }) {
