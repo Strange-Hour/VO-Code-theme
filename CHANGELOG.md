@@ -1,5 +1,46 @@
 # Changelog
 
+## 1.2.0 — 2026-04-24
+
+Cursor AI polish, TypeScript/CSS/JSX language coverage, and missing workbench slot coverage.
+No palette changes — all new entries map to existing tokens.
+
+### Added
+
+**Cursor-specific polish**
+- `editorGhostText.*` — AI inline completions now render in `--vo-text-muted` rather than
+  inheriting the default foreground, visually separating suggestions from committed code.
+- `commandCenter.*` — command bar background, border, and active/inactive states themed
+  to the void-surface hierarchy.
+- `chat.*` — AI chat panel background, avatar, and slash-command highlight colors.
+- `keybindingLabel.*` — keyboard shortcut pill styling using `--void-surface-2/3`.
+
+**TypeScript / JavaScript / JSX**
+- Decorator rule (`meta.decorator` + children) painted `--purple-mid` — parallels the
+  existing C++ macro rule so framework scaffolding reads consistently across ecosystems.
+- JSX/TSX component name rule (`support.class.component.tsx/jsx`) painted `--cyan-bright`,
+  distinguishing `<MyComponent>` from lowercase HTML elements.
+- Semantic tokens: `decorator` → `--purple-mid`, `typeParameter` → `--shield-bright`,
+  `operator` → `--vo-text-secondary`.
+
+**CSS / SCSS / Less**
+- Custom property rule (`variable.css`, `variable.scss`, `variable.other.less`) →
+  `--purple-bright`, grouping `--foo` vars with JSON keys and HTML attribute names.
+- Unit rule (`keyword.other.unit.css/scss`) → `--shield-bright`, pairing units with their
+  numbers (shield-full) in the same color family.
+- Pseudo-class/element rule → `--cyan-mid`, distinguishing `:hover`/`::before` from
+  plain attribute names (purple-bright) and type names (cyan-bright).
+- At-rule explicit rule (`keyword.control.at-rule.css/scss/less`) → `--purple-glow`,
+  ensuring SCSS/Less `@mixin`, `@include` etc. catch the rule cleanly.
+
+**Workbench slots**
+- 28 `symbolIcon.*` entries — each symbol kind icon gets the same color its token uses
+  in the editor (classes → cyan-bright, functions → tac-primary, variables → text-primary, etc.).
+- `editorCodeLens.foreground` → `--vo-text-muted`.
+- `editor.rangeHighlightBackground` → `--cyan-bright` at 8% alpha.
+- 9 `testing.*` entries: pass/fail/error/queue/skip icons use the health-color vocabulary;
+  test peek borders use cyan-bright / tac-primary.
+
 ## 1.1.0 — 2026-04-24
 
 Polish pass + build pipeline. No palette changes; same colors driven from a single source.

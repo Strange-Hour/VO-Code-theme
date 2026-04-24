@@ -257,7 +257,72 @@
         "extensionButton.prominentForeground": "{{void-deep}}",
         "extensionButton.prominentHoverBackground": "{{cyan-bright}}",
         "extensionBadge.remoteBackground": "{{cyan-mid}}",
-        "extensionBadge.remoteForeground": "{{void-deep}}"
+        "extensionBadge.remoteForeground": "{{void-deep}}",
+
+        "editorGhostText.foreground": "{{vo-text-muted}}",
+        "editorGhostText.background": "{{void-deep}}00",
+        "editorGhostText.border": "{{void-deep}}00",
+
+        "commandCenter.background": "{{void-surface}}",
+        "commandCenter.activeBackground": "{{void-surface-2}}",
+        "commandCenter.foreground": "{{vo-text-primary}}",
+        "commandCenter.inactiveForeground": "{{vo-text-muted}}",
+        "commandCenter.border": "{{void-surface-2}}",
+        "commandCenter.inactiveBorder": "{{void-surface-2}}",
+        "commandCenter.activeBorder": "{{cyan-bright}}",
+        "commandCenter.debuggingBackground": "{{tac-primary}}",
+
+        "chat.requestBackground": "{{void-surface}}",
+        "chat.avatarBackground": "{{void-surface-2}}",
+        "chat.avatarForeground": "{{vo-text-primary}}",
+        "chat.slashCommandBackground": "{{cyan-bright}}20",
+        "chat.slashCommandForeground": "{{cyan-bright}}",
+
+        "keybindingLabel.background": "{{void-surface-2}}",
+        "keybindingLabel.foreground": "{{vo-text-secondary}}",
+        "keybindingLabel.border": "{{void-surface-3}}",
+        "keybindingLabel.bottomBorder": "{{void-surface-3}}",
+
+        "symbolIcon.classForeground": "{{cyan-bright}}",
+        "symbolIcon.interfaceForeground": "{{cyan-bright}}",
+        "symbolIcon.enumForeground": "{{cyan-bright}}",
+        "symbolIcon.namespaceForeground": "{{cyan-bright}}",
+        "symbolIcon.structForeground": "{{cyan-bright}}",
+        "symbolIcon.typeParameterForeground": "{{shield-bright}}",
+        "symbolIcon.functionForeground": "{{tac-primary}}",
+        "symbolIcon.methodForeground": "{{tac-primary}}",
+        "symbolIcon.constructorForeground": "{{tac-primary}}",
+        "symbolIcon.variableForeground": "{{vo-text-primary}}",
+        "symbolIcon.fieldForeground": "{{vo-text-primary}}",
+        "symbolIcon.propertyForeground": "{{vo-text-primary}}",
+        "symbolIcon.enumMemberForeground": "{{shield-bright}}",
+        "symbolIcon.constantForeground": "{{shield-bright}}",
+        "symbolIcon.stringForeground": "{{health-full}}",
+        "symbolIcon.numberForeground": "{{shield-full}}",
+        "symbolIcon.booleanForeground": "{{shield-full}}",
+        "symbolIcon.nullForeground": "{{shield-full}}",
+        "symbolIcon.keyForeground": "{{purple-bright}}",
+        "symbolIcon.keywordForeground": "{{purple-glow}}",
+        "symbolIcon.operatorForeground": "{{vo-text-secondary}}",
+        "symbolIcon.unitForeground": "{{shield-bright}}",
+        "symbolIcon.packageForeground": "{{cyan-mid}}",
+        "symbolIcon.fileForeground": "{{vo-text-secondary}}",
+        "symbolIcon.folderForeground": "{{vo-text-secondary}}",
+        "symbolIcon.moduleForeground": "{{cyan-mid}}",
+        "symbolIcon.eventForeground": "{{tac-bright}}",
+
+        "editorCodeLens.foreground": "{{vo-text-muted}}",
+        "editor.rangeHighlightBackground": "{{cyan-bright}}15",
+        "editor.rangeHighlightBorder": "{{void-deep}}00",
+        "testing.runAction": "{{health-full}}",
+        "testing.iconPassed": "{{health-full}}",
+        "testing.iconFailed": "{{health-low}}",
+        "testing.iconErrored": "{{health-low}}",
+        "testing.iconQueued": "{{shield-full}}",
+        "testing.iconUnset": "{{vo-text-muted}}",
+        "testing.iconSkipped": "{{vo-text-muted}}",
+        "testing.peekBorder": "{{cyan-bright}}",
+        "testing.messagePeekBorder": "{{tac-primary}}"
     },
     "tokenColors": [
         {
@@ -351,6 +416,25 @@
             "settings": { "foreground": "{{purple-mid}}" }
         },
         {
+            "name": "TypeScript/JS decorators",
+            "scope": [
+                "meta.decorator",
+                "meta.decorator punctuation.decorator",
+                "meta.decorator entity.name.function"
+            ],
+            "settings": { "foreground": "{{purple-mid}}" }
+        },
+        {
+            "name": "JSX/TSX React component names",
+            "scope": [
+                "support.class.component.tsx",
+                "support.class.component.jsx",
+                "support.class.component.js",
+                "meta.jsx.opening-element entity.name.tag"
+            ],
+            "settings": { "foreground": "{{cyan-bright}}" }
+        },
+        {
             "name": "Variables",
             "scope": ["variable", "variable.other", "variable.parameter"],
             "settings": { "foreground": "{{vo-text-primary}}" }
@@ -414,6 +498,43 @@
                 "support.type.property-name.json"
             ],
             "settings": { "foreground": "{{purple-bright}}" }
+        },
+        {
+            "name": "CSS custom properties (variables)",
+            "scope": [
+                "variable.css",
+                "variable.scss",
+                "variable.other.less",
+                "support.type.custom-property.name.css"
+            ],
+            "settings": { "foreground": "{{purple-bright}}" }
+        },
+        {
+            "name": "CSS units",
+            "scope": [
+                "keyword.other.unit.css",
+                "keyword.other.unit.scss",
+                "constant.numeric.css keyword.other.unit"
+            ],
+            "settings": { "foreground": "{{shield-bright}}" }
+        },
+        {
+            "name": "CSS pseudo-classes and pseudo-elements",
+            "scope": [
+                "entity.other.attribute-name.pseudo-class.css",
+                "entity.other.attribute-name.pseudo-element.css",
+                "punctuation.definition.entity.css"
+            ],
+            "settings": { "foreground": "{{cyan-mid}}" }
+        },
+        {
+            "name": "CSS at-rules",
+            "scope": [
+                "keyword.control.at-rule.css",
+                "keyword.control.at-rule.scss",
+                "keyword.control.at-rule.less"
+            ],
+            "settings": { "foreground": "{{purple-glow}}" }
         },
         {
             "name": "Markdown headings",
@@ -482,6 +603,9 @@
         "keyword": "{{purple-glow}}",
         "string": "{{health-full}}",
         "number": "{{shield-full}}",
-        "comment": { "foreground": "{{vo-text-muted}}", "fontStyle": "italic" }
+        "comment": { "foreground": "{{vo-text-muted}}", "fontStyle": "italic" },
+        "decorator": { "foreground": "{{purple-mid}}" },
+        "typeParameter": { "foreground": "{{shield-bright}}" },
+        "operator": { "foreground": "{{vo-text-secondary}}" }
     }
 }

@@ -257,7 +257,72 @@
         "extensionButton.prominentForeground": "#0D0F14",
         "extensionButton.prominentHoverBackground": "#00D4E6",
         "extensionBadge.remoteBackground": "#0AAFBE",
-        "extensionBadge.remoteForeground": "#0D0F14"
+        "extensionBadge.remoteForeground": "#0D0F14",
+
+        "editorGhostText.foreground": "#4A5168",
+        "editorGhostText.background": "#0D0F1400",
+        "editorGhostText.border": "#0D0F1400",
+
+        "commandCenter.background": "#13161D",
+        "commandCenter.activeBackground": "#1A1E28",
+        "commandCenter.foreground": "#E2E6F0",
+        "commandCenter.inactiveForeground": "#4A5168",
+        "commandCenter.border": "#1A1E28",
+        "commandCenter.inactiveBorder": "#1A1E28",
+        "commandCenter.activeBorder": "#00D4E6",
+        "commandCenter.debuggingBackground": "#F0A832",
+
+        "chat.requestBackground": "#13161D",
+        "chat.avatarBackground": "#1A1E28",
+        "chat.avatarForeground": "#E2E6F0",
+        "chat.slashCommandBackground": "#00D4E620",
+        "chat.slashCommandForeground": "#00D4E6",
+
+        "keybindingLabel.background": "#1A1E28",
+        "keybindingLabel.foreground": "#8891AA",
+        "keybindingLabel.border": "#222733",
+        "keybindingLabel.bottomBorder": "#222733",
+
+        "symbolIcon.classForeground": "#00D4E6",
+        "symbolIcon.interfaceForeground": "#00D4E6",
+        "symbolIcon.enumForeground": "#00D4E6",
+        "symbolIcon.namespaceForeground": "#00D4E6",
+        "symbolIcon.structForeground": "#00D4E6",
+        "symbolIcon.typeParameterForeground": "#7DC4FF",
+        "symbolIcon.functionForeground": "#F0A832",
+        "symbolIcon.methodForeground": "#F0A832",
+        "symbolIcon.constructorForeground": "#F0A832",
+        "symbolIcon.variableForeground": "#E2E6F0",
+        "symbolIcon.fieldForeground": "#E2E6F0",
+        "symbolIcon.propertyForeground": "#E2E6F0",
+        "symbolIcon.enumMemberForeground": "#7DC4FF",
+        "symbolIcon.constantForeground": "#7DC4FF",
+        "symbolIcon.stringForeground": "#2DD65B",
+        "symbolIcon.numberForeground": "#4DA8FF",
+        "symbolIcon.booleanForeground": "#4DA8FF",
+        "symbolIcon.nullForeground": "#4DA8FF",
+        "symbolIcon.keyForeground": "#9A6EF0",
+        "symbolIcon.keywordForeground": "#B48AFF",
+        "symbolIcon.operatorForeground": "#8891AA",
+        "symbolIcon.unitForeground": "#7DC4FF",
+        "symbolIcon.packageForeground": "#0AAFBE",
+        "symbolIcon.fileForeground": "#8891AA",
+        "symbolIcon.folderForeground": "#8891AA",
+        "symbolIcon.moduleForeground": "#0AAFBE",
+        "symbolIcon.eventForeground": "#FFC44D",
+
+        "editorCodeLens.foreground": "#4A5168",
+        "editor.rangeHighlightBackground": "#00D4E615",
+        "editor.rangeHighlightBorder": "#0D0F1400",
+        "testing.runAction": "#2DD65B",
+        "testing.iconPassed": "#2DD65B",
+        "testing.iconFailed": "#F04040",
+        "testing.iconErrored": "#F04040",
+        "testing.iconQueued": "#4DA8FF",
+        "testing.iconUnset": "#4A5168",
+        "testing.iconSkipped": "#4A5168",
+        "testing.peekBorder": "#00D4E6",
+        "testing.messagePeekBorder": "#F0A832"
     },
     "tokenColors": [
         {
@@ -351,6 +416,25 @@
             "settings": { "foreground": "#7A52D1" }
         },
         {
+            "name": "TypeScript/JS decorators",
+            "scope": [
+                "meta.decorator",
+                "meta.decorator punctuation.decorator",
+                "meta.decorator entity.name.function"
+            ],
+            "settings": { "foreground": "#7A52D1" }
+        },
+        {
+            "name": "JSX/TSX React component names",
+            "scope": [
+                "support.class.component.tsx",
+                "support.class.component.jsx",
+                "support.class.component.js",
+                "meta.jsx.opening-element entity.name.tag"
+            ],
+            "settings": { "foreground": "#00D4E6" }
+        },
+        {
             "name": "Variables",
             "scope": ["variable", "variable.other", "variable.parameter"],
             "settings": { "foreground": "#E2E6F0" }
@@ -414,6 +498,43 @@
                 "support.type.property-name.json"
             ],
             "settings": { "foreground": "#9A6EF0" }
+        },
+        {
+            "name": "CSS custom properties (variables)",
+            "scope": [
+                "variable.css",
+                "variable.scss",
+                "variable.other.less",
+                "support.type.custom-property.name.css"
+            ],
+            "settings": { "foreground": "#9A6EF0" }
+        },
+        {
+            "name": "CSS units",
+            "scope": [
+                "keyword.other.unit.css",
+                "keyword.other.unit.scss",
+                "constant.numeric.css keyword.other.unit"
+            ],
+            "settings": { "foreground": "#7DC4FF" }
+        },
+        {
+            "name": "CSS pseudo-classes and pseudo-elements",
+            "scope": [
+                "entity.other.attribute-name.pseudo-class.css",
+                "entity.other.attribute-name.pseudo-element.css",
+                "punctuation.definition.entity.css"
+            ],
+            "settings": { "foreground": "#0AAFBE" }
+        },
+        {
+            "name": "CSS at-rules",
+            "scope": [
+                "keyword.control.at-rule.css",
+                "keyword.control.at-rule.scss",
+                "keyword.control.at-rule.less"
+            ],
+            "settings": { "foreground": "#B48AFF" }
         },
         {
             "name": "Markdown headings",
@@ -482,6 +603,9 @@
         "keyword": "#B48AFF",
         "string": "#2DD65B",
         "number": "#4DA8FF",
-        "comment": { "foreground": "#4A5168", "fontStyle": "italic" }
+        "comment": { "foreground": "#4A5168", "fontStyle": "italic" },
+        "decorator": { "foreground": "#7A52D1" },
+        "typeParameter": { "foreground": "#7DC4FF" },
+        "operator": { "foreground": "#8891AA" }
     }
 }
