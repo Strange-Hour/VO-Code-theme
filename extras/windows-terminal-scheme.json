@@ -1,0 +1,23 @@
+{
+    "name": "Void Odyssey",
+    "background": "#0D0F14",
+    "foreground": "#E2E6F0",
+    "cursorColor": "#00F0FF",
+    "selectionBackground": "#7A52D1",
+    "black": "#1A1E28",
+    "red": "#F04040",
+    "green": "#2DD65B",
+    "yellow": "#E8C320",
+    "blue": "#4DA8FF",
+    "purple": "#9A6EF0",
+    "cyan": "#0AAFBE",
+    "white": "#8891AA",
+    "brightBlack": "#4A5168",
+    "brightRed": "#FF6B6B",
+    "brightGreen": "#5FED83",
+    "brightYellow": "#FFC44D",
+    "brightBlue": "#7DC4FF",
+    "brightPurple": "#B48AFF",
+    "brightCyan": "#00D4E6",
+    "brightWhite": "#E2E6F0"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "void-odyssey-theme",
+    "displayName": "Void Odyssey",
+    "description": "Color theme matching the Void Odyssey docs v2 palette — cyan / purple / health-tier accents on a void-black canvas.",
+    "version": "1.0.0",
+    "publisher": "voidodyssey",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": ["Themes"],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Void Odyssey",
+                "uiTheme": "vs-dark",
+                "path": "./themes/void-odyssey-color-theme.json"
+            }
+        ]
+    }
+}
