@@ -333,7 +333,7 @@
         {
             "name": "Comments",
             "scope": ["comment", "punctuation.definition.comment", "string.comment"],
-            "settings": { "foreground": "#4A5168", "fontStyle": "italic" }
+            "settings": { "foreground": "#7ABFA8", "fontStyle": "italic" }
         },
         {
             "name": "Keywords",
@@ -608,7 +608,7 @@
         "keyword": "#B48AFF",
         "string": "#2DD65B",
         "number": "#4DA8FF",
-        "comment": { "foreground": "#4A5168", "fontStyle": "italic" },
+        "comment": { "foreground": "#7ABFA8", "fontStyle": "italic" },
         "decorator": { "foreground": "#7A52D1" },
         "typeParameter": { "foreground": "#7DC4FF" },
         "operator": { "foreground": "#8891AA" }

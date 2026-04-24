@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.4.0 — 2026-04-24
+
+### Added
+- New `comment` palette token `#7ABFA8` — a sage teal distinct from all existing syntax
+  colors. Comments now render in italic sage teal instead of the near-invisible muted gray,
+  making annotations immediately readable without blending into code.
+
+### Changed
+- `tokenColors` Comments rule and `semanticTokenColors` comment entry both updated from
+  `--vo-text-muted` (#4A5168) to `--comment` (#7ABFA8).
+
 ## 1.3.0 — 2026-04-24
 
 Popup/overlay readability pass — all floating UI surfaces lifted off the black canvas.

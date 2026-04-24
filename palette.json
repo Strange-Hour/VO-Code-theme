@@ -29,5 +29,7 @@
     "tac-primary": "#F0A832",
     "tac-bright": "#FFC44D",
 
-    "dps-bright": "#FF6B6B"
+    "dps-bright": "#FF6B6B",
+
+    "comment": "#7ABFA8"
 }
