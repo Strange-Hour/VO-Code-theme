@@ -1,5 +1,28 @@
 # Changelog
 
+## 1.6.0 — 2026-04-24
+
+HUD frame pass — title bar and status bar now carry the theme's signature
+cyan/purple identity; Cursor AI panel separated from the editor surface.
+
+### Changed
+
+- **Title bar** → `--purple-mid` (#7A52D1) background. The header now reads as a distinct
+  purple HUD strip rather than blending into the void-black chrome.
+- **Status bar** → `--cyan-mid` (#0AAFBE) background with `--void-deep` foreground. The
+  footer becomes a vivid cyan HUD bar — matching the game's health/state readout aesthetic
+  and complementing the purple title bar.
+- **`statusBarItem.remoteBackground`** → `--purple-mid` so the remote badge pops against
+  the cyan bar instead of blending in.
+- **`statusBarItem.hoverBackground`** → `--void-deep` at 25% alpha — dark press overlay
+  on the cyan surface rather than the old void-surface block.
+
+### Added
+
+- **`secondarySideBar.*`** (7 tokens) — Cursor's AI chat panel now uses the same
+  `--void-surface` / `--void-surface-2` surface hierarchy as the left file explorer,
+  separating it clearly from the `--void-deep` editor canvas.
+
 ## 1.5.0 — 2026-04-24
 
 Panel clarity pass — editor canvas, sidebar, and chat panel now occupy clearly distinct
