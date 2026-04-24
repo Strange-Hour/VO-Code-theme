@@ -86,6 +86,7 @@ sensible defaults — override any of them in your Ghostty config after the `the
 
 1. From the repo root, copy the generated theme file to Claude Code's themes directory:
    ```sh
+   mkdir -p ~/.claude/themes
    cp extras/claude-code-theme.json ~/.claude/themes/void-odyssey.json
    ```
 2. Add or update the `theme` key in `~/.claude/settings.json`:
