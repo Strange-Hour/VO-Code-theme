@@ -1,6 +1,6 @@
 # Void Odyssey Theme
 
-A dark color theme for **VS Code**, **Cursor**, and **Windows Terminal**, derived from the
+A dark color theme for **VS Code**, **Cursor**, **Windows Terminal**, and **Ghostty**, derived from the
 [Void Odyssey](https://github.com/Strange-Hour) docs v2 palette.
 Cyan and purple accents over a deep void-black canvas; health/state colors mapped onto
 syntax tokens so the editor feels like an extension of the game's UI language.
@@ -58,7 +58,7 @@ Save the file and Windows Terminal hot-reloads.
 
 ### Ghostty
 
-1. Copy the generated theme file to Ghostty's themes directory:
+1. From the repo root, copy the generated theme file to Ghostty's themes directory:
    ```sh
    cp extras/ghostty-theme.conf ~/.config/ghostty/themes/"Void Odyssey"
    ```
@@ -66,7 +66,7 @@ Save the file and Windows Terminal hot-reloads.
    ```
    theme = Void Odyssey
    ```
-3. Restart Ghostty (or reload config with the keybind) to apply.
+3. Restart Ghostty to apply. (Config reload does not re-scan the themes directory.)
 
 The theme file includes appearance settings (opacity, blur, cursor style, font size) as
 sensible defaults — override any of them in your main `~/.config/ghostty/config` after
@@ -186,13 +186,14 @@ add that scope to the rule's `scope` array in the template and rebuild.
 
 The token names and hex values come from the Void Odyssey docs site theme
 (`docs/.vitepress/theme/custom.css` in the parent project). This repo translates that
-palette into the vocabularies VS Code and Windows Terminal expect:
+palette into the vocabularies VS Code, Windows Terminal, and Ghostty expect:
 
 - VS Code: ~140 named workbench color slots + 26 TextMate token rules + 16 semantic token rules
 - Windows Terminal: 16 ANSI colors + background / foreground / cursor / selection
+- Ghostty: 16 ANSI colors + background / foreground / cursor / selection + appearance settings (opacity, blur, cursor, font)
 
 If the docs palette ever shifts (token rename, new accent, etc.), update the `:root` block
-in the docs site, then propagate the matching hex to this repo's two JSON files.
+in the docs site, then propagate the matching hex to this repo's three output files.
 
 ## License
 
