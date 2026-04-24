@@ -17,6 +17,8 @@ themes/
 extras/
   windows-terminal-scheme.tmpl          ─ template
   windows-terminal-scheme.json          ─ generated ANSI palette for Windows Terminal
+  ghostty-theme.tmpl                    ─ template
+  ghostty-theme.conf                    ─ generated color + appearance theme for Ghostty
 CHANGELOG.md                            ─ versioned change history
 ```
 
@@ -53,6 +55,22 @@ Reload window → `Ctrl+K Ctrl+T` → **Void Odyssey**.
    add `"colorScheme": "Void Odyssey"`.
 
 Save the file and Windows Terminal hot-reloads.
+
+### Ghostty
+
+1. Copy the generated theme file to Ghostty's themes directory:
+   ```sh
+   cp extras/ghostty-theme.conf ~/.config/ghostty/themes/"Void Odyssey"
+   ```
+2. Add the following line to `~/.config/ghostty/config`:
+   ```
+   theme = Void Odyssey
+   ```
+3. Restart Ghostty (or reload config with the keybind) to apply.
+
+The theme file includes appearance settings (opacity, blur, cursor style, font size) as
+sensible defaults — override any of them in your main `~/.config/ghostty/config` after
+the `theme` line.
 
 ## Palette
 
