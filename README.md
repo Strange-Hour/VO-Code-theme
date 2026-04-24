@@ -1,6 +1,6 @@
 # Void Odyssey Theme
 
-A dark color theme for **VS Code**, **Cursor**, **Windows Terminal**, and **Ghostty**, derived from the
+A dark color theme for **VS Code**, **Cursor**, **Windows Terminal**, **Ghostty**, and **Claude Code**, derived from the
 [Void Odyssey](https://github.com/Strange-Hour) docs v2 palette.
 Cyan and purple accents over a deep void-black canvas; health/state colors mapped onto
 syntax tokens so the editor feels like an extension of the game's UI language.
@@ -19,6 +19,8 @@ extras/
   windows-terminal-scheme.json          ─ generated ANSI palette for Windows Terminal
   ghostty-theme.tmpl                    ─ template
   ghostty-theme.conf                    ─ generated color + appearance theme for Ghostty
+  claude-code-theme.tmpl                ─ template
+  claude-code-theme.json                ─ generated custom theme for Claude Code CLI
 CHANGELOG.md                            ─ versioned change history
 ```
 
@@ -79,6 +81,20 @@ Save the file and Windows Terminal hot-reloads.
 
 The theme file includes appearance settings (opacity, blur, cursor style, font size) as
 sensible defaults — override any of them in your Ghostty config after the `theme` line.
+
+### Claude Code
+
+1. From the repo root, copy the generated theme file to Claude Code's themes directory:
+   ```sh
+   cp extras/claude-code-theme.json ~/.claude/themes/void-odyssey.json
+   ```
+2. Add or update the `theme` key in `~/.claude/settings.json`:
+   ```json
+   {
+     "theme": "custom:void-odyssey"
+   }
+   ```
+3. The theme is applied immediately — no restart required.
 
 ## Palette
 
@@ -199,9 +215,10 @@ palette into the vocabularies VS Code, Windows Terminal, and Ghostty expect:
 - VS Code: ~140 named workbench color slots + 26 TextMate token rules + 16 semantic token rules
 - Windows Terminal: 16 ANSI colors + background / foreground / cursor / selection
 - Ghostty: 16 ANSI colors + background / foreground / cursor / selection + appearance settings (opacity, blur, cursor, font)
+- Claude Code: 30 theme color tokens mapped to the Void Odyssey palette
 
 If the docs palette ever shifts (token rename, new accent, etc.), update the `:root` block
-in the docs site, then propagate the matching hex to this repo's three output files.
+in the docs site, then propagate the matching hex to this repo's four output files.
 
 ## License
 
