@@ -46,6 +46,33 @@
         "editorOverviewRuler.addedForeground": "#2DD65B",
         "editorOverviewRuler.deletedForeground": "#F04040",
 
+        "editorBracketHighlight.foreground1": "#00D4E6",
+        "editorBracketHighlight.foreground2": "#B48AFF",
+        "editorBracketHighlight.foreground3": "#F0A832",
+        "editorBracketHighlight.foreground4": "#2DD65B",
+        "editorBracketHighlight.foreground5": "#4DA8FF",
+        "editorBracketHighlight.foreground6": "#FF6B6B",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#F04040",
+        "editorBracketPairGuide.background1": "#00D4E630",
+        "editorBracketPairGuide.background2": "#B48AFF30",
+        "editorBracketPairGuide.background3": "#F0A83230",
+        "editorBracketPairGuide.background4": "#2DD65B30",
+        "editorBracketPairGuide.background5": "#4DA8FF30",
+        "editorBracketPairGuide.background6": "#FF6B6B30",
+        "editorBracketPairGuide.activeBackground1": "#00D4E6",
+        "editorBracketPairGuide.activeBackground2": "#B48AFF",
+        "editorBracketPairGuide.activeBackground3": "#F0A832",
+        "editorBracketPairGuide.activeBackground4": "#2DD65B",
+        "editorBracketPairGuide.activeBackground5": "#4DA8FF",
+        "editorBracketPairGuide.activeBackground6": "#FF6B6B",
+
+        "editorInlayHint.background": "#13161D",
+        "editorInlayHint.foreground": "#4A5168",
+        "editorInlayHint.typeBackground": "#13161D",
+        "editorInlayHint.typeForeground": "#00D4E6",
+        "editorInlayHint.parameterBackground": "#13161D",
+        "editorInlayHint.parameterForeground": "#8891AA",
+
         "editorWidget.background": "#13161D",
         "editorWidget.foreground": "#E2E6F0",
         "editorWidget.border": "#1A1E28",
@@ -312,6 +339,18 @@
             "settings": { "foreground": "#F0A832" }
         },
         {
+            "name": "C/C++ preprocessor macros (Unreal UCLASS, UFUNCTION, UPROPERTY, USTRUCT, UENUM, UMETA, ...)",
+            "scope": [
+                "entity.name.function.preprocessor.c",
+                "entity.name.function.preprocessor.cpp",
+                "meta.preprocessor.macro.c entity.name.function",
+                "meta.preprocessor.macro.cpp entity.name.function",
+                "support.function.attribute.cpp",
+                "meta.attribute.cpp entity.name.function"
+            ],
+            "settings": { "foreground": "#7A52D1" }
+        },
+        {
             "name": "Variables",
             "scope": ["variable", "variable.other", "variable.parameter"],
             "settings": { "foreground": "#E2E6F0" }
@@ -434,7 +473,8 @@
         "enumMember": "#7DC4FF",
         "function": "#F0A832",
         "method": "#F0A832",
-        "macro": "#9A6EF0",
+        "macro": "#7A52D1",
+        "macro.cpp": "#7A52D1",
         "variable": "#E2E6F0",
         "parameter": { "foreground": "#E2E6F0", "fontStyle": "italic" },
         "property": "#E2E6F0",

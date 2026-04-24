@@ -8,10 +8,20 @@ syntax tokens so the editor feels like an extension of the game's UI language.
 ## What's inside
 
 ```
-package.json                          ─ VS Code / Cursor extension manifest
-themes/void-odyssey-color-theme.json  ─ workbench colors + TextMate scopes + semantic tokens
-extras/windows-terminal-scheme.json   ─ matching ANSI palette for Windows Terminal
+palette.json                            ─ single source of truth: 24 named tokens → hex
+tools/build.mjs                         ─ generator: substitutes {{token}} markers in *.tmpl files
+package.json                            ─ VS Code / Cursor extension manifest
+themes/
+  void-odyssey-color-theme.tmpl         ─ template (edit this, then npm run build)
+  void-odyssey-color-theme.json         ─ generated workbench + TextMate + semantic tokens
+extras/
+  windows-terminal-scheme.tmpl          ─ template
+  windows-terminal-scheme.json          ─ generated ANSI palette for Windows Terminal
+CHANGELOG.md                            ─ versioned change history
 ```
+
+Generated files are committed so users can install without running the build step.
+If you change `palette.json`, run `npm run build` and commit the regenerated JSON alongside.
 
 ## Install
 
@@ -107,9 +117,33 @@ Single source of truth: the docs v2 tokens defined in the Void Odyssey vitepress
 
 ## Tweaking
 
-Single edit point: `themes/void-odyssey-color-theme.json`. Reload the window to apply.
-The Windows Terminal scheme lives separately at `extras/windows-terminal-scheme.json` —
-keep the two ANSI mappings in sync if you adjust them.
+The same hex codes feed every output (VS Code workbench, VS Code tokens, semantic tokens,
+Windows Terminal ANSI palette). Edit one place; rebuild; everything stays in sync.
+
+```powershell
+# 1. Edit a token value
+notepad palette.json   # change e.g. "cyan-bright" : "#00D4E6"
+
+# 2. Regenerate every derived file
+npm run build
+
+# 3. Reload your editor (or terminal) to see the change
+```
+
+If you want to remap a slot rather than retune a hex (say, route Markdown headings through
+`--purple-glow` instead of `--cyan-bright`), edit the `.tmpl` files in `themes/` and `extras/`,
+then `npm run build`. Templates use `{{token-name}}` markers — the build fails loudly if a
+template references a token that doesn't exist in `palette.json`.
+
+## C++ / Unreal note
+
+The theme adds a dedicated rule for C/C++ preprocessor function-like macros (the scope
+`entity.name.function.preprocessor.cpp` and friends), painting them in `--purple-mid`.
+This visually separates Unreal scaffolding macros (`UCLASS`, `UFUNCTION`, `UPROPERTY`,
+`USTRUCT`, `UENUM`, `UMETA`, …) from your actual function calls (which stay `--tac-primary`
+amber). If you spot a macro that isn't picking up the rule, `Ctrl+Shift+P` →
+**Developer: Inspect Editor Tokens and Scopes** on the symbol will show its real scope —
+add that scope to the rule's `scope` array in the template and rebuild.
 
 ## Origin
 

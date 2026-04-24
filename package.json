@@ -2,12 +2,25 @@
     "name": "void-odyssey-theme",
     "displayName": "Void Odyssey",
     "description": "Color theme matching the Void Odyssey docs v2 palette — cyan / purple / health-tier accents on a void-black canvas.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "voidodyssey",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Strange-Hour/VO-Code-theme.git"
+    },
     "engines": {
         "vscode": "^1.60.0"
     },
     "categories": ["Themes"],
+    "keywords": [
+        "void odyssey",
+        "dark",
+        "cyan",
+        "purple",
+        "unreal",
+        "cpp",
+        "game-dev"
+    ],
     "contributes": {
         "themes": [
             {
@@ -16,5 +29,8 @@
                 "path": "./themes/void-odyssey-color-theme.json"
             }
         ]
+    },
+    "scripts": {
+        "build": "node tools/build.mjs"
     }
 }
