@@ -21,14 +21,21 @@ const targets = [
     {
         template: "themes/void-odyssey-color-theme.tmpl",
         output: "themes/void-odyssey-color-theme.json",
+        validate: true,
     },
     {
         template: "extras/windows-terminal-scheme.tmpl",
         output: "extras/windows-terminal-scheme.json",
+        validate: true,
+    },
+    {
+        template: "extras/ghostty-theme.tmpl",
+        output: "extras/ghostty-theme.conf",
+        validate: false,
     },
 ];
 
-function render({ template, output }) {
+function render({ template, output, validate = true }) {
     const tplPath = join(root, template);
     const outPath = join(root, output);
     const tpl = readFileSync(tplPath, "utf8");
@@ -49,10 +56,12 @@ function render({ template, output }) {
         );
     }
 
-    try {
-        JSON.parse(rendered);
-    } catch (err) {
-        throw new Error(`${output}: rendered file is not valid JSON.\n${err.message}`);
+    if (validate) {
+        try {
+            JSON.parse(rendered);
+        } catch (err) {
+            throw new Error(`${output}: rendered file is not valid JSON.\n${err.message}`);
+        }
     }
 
     writeFileSync(outPath, rendered);
