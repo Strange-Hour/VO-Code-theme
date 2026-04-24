@@ -1,5 +1,35 @@
 # Changelog
 
+## 1.3.0 — 2026-04-24
+
+Popup/overlay readability pass — all floating UI surfaces lifted off the black canvas.
+
+### Changed
+
+- **Widget/suggest/hover backgrounds** → `--void-surface-2` (#1A1E28), up from `--void-surface`
+  (#13161D). Autocomplete popups, hover docs, and find widgets now clearly float above the
+  `--void-deep` (#0D0F14) editor background.
+- **Widget borders** → `--cyan-bright` at 25% alpha. Replaces the barely-visible surface
+  border with a subtle cyan frame that makes popups instantly recognisable.
+- **Hover/selected states within popups** → `--void-surface-3` (#222733). Maintains
+  internal contrast now that the popup base is lighter.
+- **Context menus and dropdowns** — same surface-2 background / surface-3 selection /
+  cyan-bright border treatment.
+- **Notifications** — background `--void-surface-2`, header `--void-surface-3`, border
+  `--void-surface-3`.
+- **Breadcrumb picker** → `--void-surface-2`.
+- **Peek view result + title** → `--void-surface-2`.
+- **Command center** — background `--void-surface-2`, active `--void-surface-3`,
+  borders updated to cyan-bright.
+- **Chat request background** → `--void-surface-2`.
+- **Input fields** — background `--void-surface-2`, border `--void-surface-3`.
+
+### Added
+
+- `quickInput.*` tokens (command palette was previously unstyled, falling back to
+  editor defaults): `quickInput.background` / `quickInput.foreground` / `quickInputTitle.background` /
+  `quickInputList.focusBackground` / `quickInputList.focusForeground`.
+
 ## 1.2.0 — 2026-04-24
 
 Cursor AI polish, TypeScript/CSS/JSX language coverage, and missing workbench slot coverage.
