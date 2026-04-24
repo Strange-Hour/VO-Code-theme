@@ -58,19 +58,27 @@ Save the file and Windows Terminal hot-reloads.
 
 ### Ghostty
 
+**macOS** config lives in `~/Library/Application Support/com.mitchellh.ghostty/`.
+**Linux** config lives in `~/.config/ghostty/`.
+
 1. From the repo root, copy the generated theme file to Ghostty's themes directory:
+
+   macOS:
+   ```sh
+   cp extras/ghostty-theme.conf ~/Library/Application\ Support/com.mitchellh.ghostty/themes/"Void Odyssey"
+   ```
+   Linux:
    ```sh
    cp extras/ghostty-theme.conf ~/.config/ghostty/themes/"Void Odyssey"
    ```
-2. Add the following line to `~/.config/ghostty/config`:
+2. Add the following line to your Ghostty config file:
    ```
    theme = Void Odyssey
    ```
 3. Restart Ghostty to apply. (Config reload does not re-scan the themes directory.)
 
 The theme file includes appearance settings (opacity, blur, cursor style, font size) as
-sensible defaults — override any of them in your main `~/.config/ghostty/config` after
-the `theme` line.
+sensible defaults — override any of them in your Ghostty config after the `theme` line.
 
 ## Palette
 
