@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.8.0 — 2026-04-24
+
+Claude Code CLI custom theme.
+
+### Added
+
+- `extras/claude-code-theme.tmpl` + `extras/claude-code-theme.json` — Claude Code CLI
+  custom theme using the full Void Odyssey palette. 30 color tokens mapped across UI
+  elements, status colors, diff highlighting, and permission dialogs. Activate with
+  `"theme": "custom:void-odyssey"` in `~/.claude/settings.json`.
+
+### Changed
+
+- `tools/build.mjs` — fourth target added for Claude Code theme (JSON output, validate: true).
+- `README.md` — Claude Code install section added; tagline and Origin section updated.
+
 ## 1.7.0 — 2026-04-24
 
 Ghostty terminal theme and build pipeline extension.
