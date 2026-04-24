@@ -1,5 +1,36 @@
 # Changelog
 
+## 1.5.0 — 2026-04-24
+
+Panel clarity pass — editor canvas, sidebar, and chat panel now occupy clearly distinct
+visual layers.
+
+### Changed
+
+- **`sideBar.background`** → `--void-surface` (#13161D), up from `--void-deep` (#0D0F14).
+  Sidebar lifts off the editor background, making file trees and explorer content easier to
+  scan without blending into the canvas.
+- **`sideBar.border`** → `--void-surface-2`, up from `--void-black`. Visible dividing line
+  between sidebar and editor.
+- **`sideBarSectionHeader.background`** → `--void-surface-2`, up from `--void-surface`.
+  Section headers (EXPLORER, SOURCE CONTROL, etc.) now float above the sidebar body.
+- **`sideBarSectionHeader.border`** → `--void-surface-2`.
+- **`panel.background`** → `--void-surface` (#13161D), up from `--void-deep` (#0D0F14).
+  Bottom panel (terminal, output, problems) matches the sidebar tier, not the editor floor.
+- **`panel.border`** → `--void-surface-2`, up from `--void-surface`.
+- **`terminal.background`** → `--void-surface`. Terminal stays visually within the panel
+  rather than punching a hole to the editor background.
+- **`list.hoverBackground`** → `--void-surface-2` (was `--void-surface`). Hover state is now
+  visible on the lighter sidebar background.
+- **`list.inactiveSelectionBackground`** → `--void-surface-2` (was `--void-surface`).
+- **`list.activeSelectionBackground`** → `--void-surface-3` (was `--void-surface-2`).
+- **`list.focusBackground`** → `--void-surface-3` (was `--void-surface-2`).
+
+### Added
+
+- **`editorGroup.border`** → `--void-surface-2`. Split-pane dividers are now visible as a
+  subtle surface line rather than a hairline against the void-black background.
+
 ## 1.4.0 — 2026-04-24
 
 ### Added

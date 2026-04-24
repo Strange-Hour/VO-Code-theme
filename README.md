@@ -135,6 +135,25 @@ If you want to remap a slot rather than retune a hex (say, route Markdown headin
 then `npm run build`. Templates use `{{token-name}}` markers — the build fails loudly if a
 template references a token that doesn't exist in `palette.json`.
 
+## Tab colors (file-type extension)
+
+VS Code's theme API does not expose per-file-type tab colors natively. To get them, install
+a third-party extension such as **colorize-tabs** or **Peacock** that accepts custom color
+rules, then paste the mappings below. These hex values are lifted directly from `palette.json`
+so they stay on-brand with the rest of the theme.
+
+| File type | Token | Hex |
+| --------- | ----- | --- |
+| TypeScript / TSX | `--cyan-bright` | `#00D4E6` |
+| JavaScript / JSX | `--shield-bright` | `#7DC4FF` |
+| CSS / SCSS / Less | `--purple-bright` | `#9A6EF0` |
+| HTML | `--purple-glow` | `#B48AFF` |
+| JSON / YAML | `--tac-primary` | `#F0A832` |
+| Markdown | `--comment` | `#7ABFA8` |
+| Python | `--shield-full` | `#4DA8FF` |
+| C / C++ | `--purple-mid` | `#7A52D1` |
+| Test files (`*.test.*`, `*.spec.*`) | `--health-full` | `#2DD65B` |
+
 ## C++ / Unreal note
 
 The theme adds a dedicated rule for C/C++ preprocessor function-like macros (the scope

@@ -2,7 +2,7 @@
     "name": "void-odyssey-theme",
     "displayName": "Void Odyssey",
     "description": "Color theme matching the Void Odyssey docs v2 palette — cyan / purple / health-tier accents on a void-black canvas.",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "publisher": "voidodyssey",
     "repository": {
         "type": "git",
